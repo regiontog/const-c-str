@@ -1,8 +1,8 @@
 [package]
-name = "proc-concat-bytes-impl"
+name = "const-c-str-impl"
 version = "0.1.0"
 authors = ["Erlend Tobiassen <erlend.tobiassen@gmail.com>"]
-description = "Implementation detail, see https://crates.io/crates/proc-concat-bytes"
+description = "Implementation detail, see https://crates.io/crates/const-c-str"
 license = "MIT OR Apache-2.0"
 edition = "2018"
 

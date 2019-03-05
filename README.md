@@ -1,11 +1,13 @@
-[![Crates.io](https://img.shields.io/crates/v/proc-concat-bytes.svg)](https://crates.io/crates/proc-concat-bytes)
-[![api](https://img.shields.io/badge/api-rustdoc-blue.svg)](https://docs.rs/proc-concat-bytes/0.1.0/proc_concat_bytes/)
+[![Crates.io](https://img.shields.io/crates/v/const-c-str.svg)](https://crates.io/crates/const-c-str)
+[![api](https://img.shields.io/badge/api-rustdoc-blue.svg)](https://docs.rs/const-c-str/0.1.0/const_c_str/)
 
-# proc-concat-bytes
+# const-c-str
 
-Concatenates byte literals
+Safely create &CStr at compile time checked with [from_bytes_with_nul](https://doc.rust-lang.org/std/ffi/struct.CStr.html#method.from_bytes_with_nul)
 ## Examples
 ```rust
-use proc_concat_bytes::concat_bytes;
-let c_str = std::ffi::CStr::from_bytes_with_nul(&concat_bytes!(b"Hello World!", b'\0')[..]).unwrap();
+use const_c_str::c_str;
+
+#[cfg(feature = "const_cstr_unchecked")]
+const greeting: &std::ffi::CStr = c_str!("Hello World!");
 ```
