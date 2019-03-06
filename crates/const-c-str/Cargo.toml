@@ -1,8 +1,8 @@
 [package]
 name = "const-c-str"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Erlend Tobiassen <erlend.tobiassen@gmail.com>"]
-description = "Like std::concat but for byte strings"
+description = "Safely create &CStr at compile time"
 repository = "https://github.com/regiontog/const-c-str"
 documentation = "https://docs.rs/const-c-str/0.1.0/const_c_str/"
 license = "MIT OR Apache-2.0"
